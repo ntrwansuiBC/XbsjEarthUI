@@ -117,6 +117,7 @@
         XbsjEarthUI.create('main').then((earthUI) => {
             window.uia = earthUI;
             var earth = earthUI.earth;
+            window.earth = earth;
 
             var urlOptions = Cesium.queryToObject(window.location.search.substring(1));
 

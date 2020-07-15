@@ -9,6 +9,7 @@
       <ViewportLine></ViewportLine>
     </div>
     <StatusBarControl ref="statusBarControl"></StatusBarControl>
+    <TimelineControl ref="timelineBarControl"></TimelineControl>
     <!-- <NavigatorControl ref="navigator"></NavigatorControl> -->
 
     <component
@@ -70,6 +71,7 @@
 import MainBarControl from "./controls/MainBarControl";
 import StatusBarControl from "./controls/StatusBarControl.vue";
 import NavigatorControl from "./controls/NavigatorControl.vue";
+import TimelineControl from './controls/TimelineControl.vue';
 import ViewportLine from "./controls/ViewportLine";
 
 import SceneTreeTool from "./tools/SceneTreeTool";
@@ -164,6 +166,7 @@ import CesiumDataSource from "./viztools/CesiumDataSource";
 export default {
   components: {
     StatusBarControl,
+    TimelineControl,
     NavigatorControl,
     MainBarControl,
     SceneTreeTool,

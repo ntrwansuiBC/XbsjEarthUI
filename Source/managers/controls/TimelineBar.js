@@ -2,10 +2,10 @@
  * 状态栏
  * @class
  */
-class StatusBar {
+class TimelineBar {
     constructor(root) {
         this._root = root;
-        this._comp = root._comp.$refs.statusBarControl;
+        this._comp = root._comp.$refs.timelineBarControl;
 
         XE.MVVM.extend(this, {
              /**
@@ -13,7 +13,7 @@ class StatusBar {
             * @type {boolean}
             * @default true 
             * @instance
-            * @memberof StatusBar
+            * @memberof TimelineBar
             */
             show: true,
         });
@@ -24,7 +24,7 @@ class StatusBar {
             this._comp,
             "show",
             this,
-            "show"
+            "show",
         );
 
         //找到导航条
@@ -32,7 +32,7 @@ class StatusBar {
 
         this.unbind2 = XE.MVVM.bind(
             toolbar,
-            "statecontrolShow",
+            "timelinecontrolShow",
             this,
             "show"
         );
@@ -52,9 +52,9 @@ class StatusBar {
     
 
         this.unbind1 = this.unbind1 && this.unbind1();
-        this.unbind2 = this.unbind2 && this.unbind2();
+        // this.unbind2 = this.unbind2 && this.unbind2();
  
     }
 }
 
-export default StatusBar;
+export default TimelineBar;

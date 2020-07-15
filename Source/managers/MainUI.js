@@ -45,6 +45,7 @@ Vue.component('XbsjColorButtonArray', XbsjColorButtonArray);
 // import "iview/dist/styles/iview.css";
 
 import StatusBar from "./controls/StatusBar";
+import TimelineBar from './controls/TimelineBar';
 import SceneTree from "./tools/SceneTree";
 import ContextMenu from "./ContextMenu";
 import MainBar from "./controls/MainBar";
@@ -171,6 +172,7 @@ class MainUI {
 
     //控件初始化
     this._statusBar = new StatusBar(this);
+    this._timelineBar = new TimelineBar(this);
     this._mainbar = new MainBar(this);
 
 
@@ -199,6 +201,9 @@ class MainUI {
           */
           get statusBar() {
             return mainUI._statusBar;
+          },
+          get timelineBar(){
+            return mainUI._timelineBar;
           },
           // get navigator() {
           //     return mainUI._navigator;
