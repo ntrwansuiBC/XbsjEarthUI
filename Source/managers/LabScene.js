@@ -61,15 +61,24 @@ class LabScene {
             document.title = this.sceneName;
         }));
 
-        //更新url参数
+        // //更新url参数
         this.unbinds.push(XE.MVVM.watch(() => {
 
             if (this.sceneID) {
+            
+                var url  =  "./index.html?scene=" + this.sceneID;
+
+                var labServer = this._root.labServer;
+                if(labServer.server != labServer._defaultServer)
+                {
+                    url+="&labserver=" + labServer.server;
+                }
+
                 history.pushState(
                     "cesiumlab",
                     document.title,
-                    "./index.html?scene=" + this.sceneID
-                );
+                    url
+                ); 
             }
 
         }));
